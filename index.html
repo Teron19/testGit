@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Connect Git</h2>
+    <div id="main" class="header menu">
+        <button>Button</button>
+        <p>Viter</p>
+        <h2>Barabula</h2>
+    </div>
+
+    <script>
+        const element = document.getElementById('main');
+
+        console.log(`${element.innerHTML}
+        Получим только дочерний элемент`);
+        console.log('-----------------');
+        console.log(`${element.outerHTML}
+        Получим корневой элемент, включая дочерний`);
+    </script>
 </body>
 </html>

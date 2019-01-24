@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <!--<div id="main">
+            <button></button>
+        </div>-->
+
+        
+
+<div id="main">
+    <button>Button</button>
+    <span class="text">Some text</span>
+    <div id="description"></div>
+</div>
+
+<script>
+    const element = document.getElementById('main');
+    const description = document.getElementById('description');
+    const button = document.querySelector('button');
+    const text = document.querySelector('.text');
+
+    element.removeChild(button);
+    
+    text.remove();
+
+    const main = document.createElement('main');
+    element.replaceChild(main, description);
+    main.id = 'foo';
+
+    const deep = main.cloneNode(true);
+    deep.id = 'foo2';
+    element.appendChild(deep);
+
+            /*const element = document.querySelector('button');
+
+            element.textContent = '<span>Button</span>';*/
+
+            /*const element = document.getElementById('main');
+        
+            const button = document.createElement('button');
+            const buttonText = document.createTextNode('myButton');
+            
+            button.id = 'random';
+            button.disabled = 'disabled';
+            button.appendChild(buttonText);
+        
+            element.appendChild(button);//вставили в дом дерево
+        
+            const newElement = document.createElement('div');
+            const randomButton = document.getElementById('random');
+        
+            newElement.innerHTML = 'Some text';// <div>Some text</div>
+        
+            element.insertBefore(newElement, randomButton);
+            */
+
+        </script>
+
+</body>
+</html>
